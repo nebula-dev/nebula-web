@@ -1,0 +1,184 @@
+:root {
+  /* main colors */
+  --pink: #E25576;
+  --orange: #FE6A50;
+  --purple: #6C63FF;
+
+  /* background colors */;
+  --bgl: #13233D;
+  --bgd: #060B18;
+}
+body {
+  font-size: 100%;
+  margin: 0;
+}
+/* button style */
+.outline-btn {
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+  padding: 1em 2em;
+  display: inline-block;
+
+  /* border gradient styles */
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(290deg, var(--pink), var(--orange));
+}
+
+
+/* typography styles*/
+h1, h2 {
+  font-size: 4em;
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.9em;
+  margin: 0;
+}
+
+/* h3, h4 currently used for people section */
+h3 {
+  font-size: 2em;
+  font-family: interstate, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1em;
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin: 0;
+
+
+}
+p {
+  font-size: 1em;
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+
+}
+
+/* logo */
+.logo {
+  height: 5em;
+}
+.logo svg {
+  height: 100%;
+  width: auto;
+}
+
+/* header & menu*/
+
+header {
+  /* includes both the navbar and the dropdown menu */
+  padding: 0.5em 4em;
+  background-color: var(--bgd);
+  color: white;
+  border-bottom: 1px solid white;
+  position: fixed;
+  width: calc(100vw - 8em);
+  z-index: 100;
+
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 25% 0 25%;
+}
+
+.nav-links a {
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 0 1em;
+}
+.contact-btn {
+  margin: 0 0 0 auto;
+  color: white;
+}
+.menu-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 1em 0 0;
+  height: 2em;
+}
+.menu-btn svg {
+  height: 100%;
+  width: auto;
+}
+
+.menu {
+  /* container for the dropdown menu */
+
+}
+footer {
+  background-image: linear-gradient(to bottom right, var(--orange), var(--pink));
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4em 4em;
+
+}
+footer p{
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  font-size: 4em;
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.9em;
+  padding: 2em 1em 1em 1em;
+}
+footer a {
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  font-size: 1em;
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 0.9em;
+  padding: 1em 2em;
+  border: 5px solid white;
+  text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+  body {
+    font-size: 80%;
+  }
+  .logo {
+    height: 5em;
+  }
+  footer {
+     padding-left: 0;
+     padding-right: 0;
+  }
+}
