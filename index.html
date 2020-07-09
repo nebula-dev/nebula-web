@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="static/css/common.css">
   <link rel="stylesheet" href="static/css/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Nebula Consulting</title>
+  <link rel="icon" type="image/png" href="static/css/images/Favicon-03.png">
 </head>
 
 <body>
@@ -70,7 +71,7 @@
               <path id="Path_37" data-name="Path 37" d="M146.059,311.149l-11.317-10.063.053.016,8.165,2.129,3.068,7.854Z" transform="translate(-51.021 -9.652)" fill="url(#linear-gradient-6)" />
               <path id="Path_38" data-name="Path 38" d="M80.558,295.657l13.647-.791-13.668.8-4.944,2.889,4.934-2.889.021-.011Z" transform="translate(-23.049 -6.71)" fill="#3e1136" />
             </g>
-            <text id="NEBULA" transform="translate(121 61)" fill="white" font-size="40" font-family="Interstate-Bold, Interstate" font-weight="700">
+            <text style="text-decoration: none;" id="NEBULA" transform="translate(121 61)" fill="white" font-size="40" font-family="Interstate-Bold, Interstate" font-weight="700">
               <tspan x="0" y="0">NEBULA</tspan>
             </text>
           </g>
@@ -98,7 +99,7 @@
         <p>
           This is sample text. This is actually <br>
           quite a bit of sample text. Sample<br>
-          text we’ll think of something to<br>
+          text we&#39;ll think of something to<br>
           put here.
         </p>
         <a class="outline-btn learn-more-btn" href="">LEARN MORE</a>
@@ -124,8 +125,8 @@
         </p>
         <a class="outline-btn" href="">WHO WE ARE</a>
       </div>
-      <div class="about-image">
-        <img src="static/css/images/Astronaut.svg" alt="a spaceship soaring through a nebula">
+      <div class="about-img">
+        <img src="static/css/images/Astronaut.svg" alt="an astronaut wandering among the stars">
       </div>
 
     </section>
@@ -154,7 +155,13 @@
   </main>
   <footer>
     <p>Have a project you'd like us to work on?</p>
-    <a href="">GET IN TOUCH!</a>
+    <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbw0tK_bI9hOklvWrtxvF1PU6Ejo7IHkDv5kT3kT9VsOYb7qtMVm/exec">
+      <input id="name" name="name" placeholder="What should we call you?" />
+      <input id="subject" name="subject" type="text" value="" required placeholder="What's this about?" />
+      <textarea id="body" name="body" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+      <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+      <button>SUBMIT</button>
+    </form>
   </footer>
 
 </body>

@@ -10,13 +10,13 @@ hero/landing section
 
 */
 .hero-section {
-  min-height: 90vh; /* this may cause some issues on mobile */
+  min-height: 95vh; /* this may cause some issues on mobile */
   padding: 0 4em;
   background-image: linear-gradient(to bottom right, var(--bgl), var(--bgd));
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .hero-content {
   height: 100%;
@@ -40,7 +40,9 @@ hero/landing section
 }
 .hero-img-mbl {
   display: none;
-  width: 20em
+  width: 10em;
+  right: 0;
+  position: absolute;
 
 }
 
@@ -54,7 +56,7 @@ about section
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 14em 0 4em;
 }
 .about-content {
@@ -64,11 +66,11 @@ about section
 .about-content p {
   margin: 2em 0;
 }
-.about-image {
+.about-img {
   width: 40em;
   margin-right: 4em
 }
-.about-image img {
+.about-img img {
   width: 100%;
   height: auto;
 }
@@ -133,10 +135,51 @@ people section
   left: 2em;
 
 }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 500px;
+}
 
+input, textarea {
+  font-size: 1em;
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding: 1em 1em;
+  border-radius: 0;
+  width: 100%;
+  margin: 1em 0;
+  border: 3px solid var(--purple);
+  background-image: linear-gradient(to bottom right, var(--bgl), var(--bgd));
+  color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+form button {
+  background-image: linear-gradient(to bottom right, var(--bgl), var(--bgd));
+  border: 3px solid var(--purple);
+  background-color: transparent;
+  font-size: 1em;
+  font-family: acumin-pro-semi-condensed, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  outline: none;
+  padding: 1em 4em;
+  color: white;
+  margin: 1em 0;
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 3em;
+  }
   .hero-img {
     display: none;
   }
@@ -144,7 +187,12 @@ people section
     display: block;
   }
   .hero-section {
-    padding-right: 0;
+    padding: 0 2em;
+    position: relative;
+    justify-content: space-between;
+  }
+  .people-section {
+    padding-bottom: 0;
   }
   .person-background-elem {
     display: none;
@@ -153,9 +201,58 @@ people section
     min-width: 0;
     min-height: 0;
     margin: 0;
+    margin-bottom: 4em;
+    background-color: transparent;
+    color: white;
+  }
+  .person img {
+    width: calc(100% - 10px);
   }
   .people-container {
     flex-direction: column;
+    padding: 0;
+    padding: 8em 2em 4em 2em;
+  }
+  .person-content {
+    position: static;
+    background-color: transparent;
+
+  }
+  .person-content img {
+    border: 5px solid var(--purple);
+  }
+  .about-section {
+    padding: 0 2em;
+    display: block;
+    position: relative;
+  }
+  .about-content {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+  }
+  .about-content p {
+    width: 480px;
+    max-width: 90%;
+    text-align: center;
+
+  }
+  .about-section h2 {
+    padding: 2em 0 0 0;
+    text-align: center;
+  }
+  .about-content a {
+    align-self: center;
+    margin-bottom: 4em;
+  }
+  .about-img {
+    max-width: 100%;
+    padding-bottom: 8em;
+  }
+  input, textarea {
+    width: 80%;
   }
 
 }
