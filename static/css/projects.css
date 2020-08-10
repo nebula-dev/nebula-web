@@ -1,0 +1,55 @@
+.projects-container {
+    min-height: 100vh;
+}
+h1 {
+    text-align: center;
+    padding-top: 12rem;
+}
+main {
+    background-color: var(--bgl);
+    /*background-image: url("images/ProjectsBackground.png");
+    background-repeat: no-repeat;*/
+    color: white;
+    padding-bottom: 8rem;
+}
+.bg {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.project-img {
+    width: 450px;
+    height: 280px;
+    background-color: white;
+    margin: 2rem 2rem;
+}
+.project-content {
+    margin: 2rem 2rem;
+}
+.project a {
+    color: white;
+}
+.project h3 {
+    color: var(--purple);
+    font-size: 1rem;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.project h2 {
+    font-size: 2rem;
+}
+.project p {
+    max-width: 450px;
+    margin: 1.5rem 0;
+}
