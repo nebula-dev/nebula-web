@@ -30,7 +30,7 @@
       <!---->
       <!---->
       <!--LOGO SVG-->
-      <a class="logo header-logo" href="">
+      <a class="logo header-logo" href="index.html">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="185.436" height="80.869" viewBox="0 0 185.436 80.869">
           <defs>
             <linearGradient id="linear-gradient" x1="0.224" y1="0.14" x2="1.057" y2="0.842" gradientUnits="objectBoundingBox">
@@ -84,11 +84,11 @@
       <!---->
 
       <nav class="nav-links">
-        <a href="">ABOUT US</a>
+        <a href="index.html#about">ABOUT US</a>
         <a href="">PROJECTS</a>
-        <a href="">PEOPLE</a>
+        <a href="index.html#people">PEOPLE</a>
       </nav>
-      <a class="outline-btn contact-btn" href="">CONTACT US</a>
+      <a class="outline-btn contact-btn" href="#footer">CONTACT US</a>
 
     </div>
   </header>
@@ -97,7 +97,8 @@
     <h1>Our Projects</h1>
     <section class = "projects-container">
       <div class = "project">
-        <div class = "project-img">
+        <div class = "project-img" style = "display: grid; place-items: center;">
+          <img src = "static/css/images/LapisBanner.png" alt = "Lapis Logo" style = "width: 100%; height: auto; padding: 5px; background-color: white;">
 
         </div>
         <div class = "project-content">
@@ -108,34 +109,20 @@
             and lots of sample text but this is the kind of thing I absolutely love.
             I love me some sample text.
           </p>
-          <a href = "" class = "outline-btn">View Case Study</a>  
+          <a style = "z-index: 20; position:relative;" href = "OtherSites/LapisSite/index.html" class = "outline-btn">View Site</a>  
         </div>
       </div>
-      <div class = "project">
-        <div class = "project-img">
-
-        </div>
-        <div class = "project-content">
-          <h2>Lapis Labs</h2>
-          <h3>WEB DESIGN</h3>
-          <p>
-            A short description of the project. This is sample text sample text. Lots
-            and lots of sample text but this is the kind of thing I absolutely love.
-            I love me some sample text.
-          </p>
-          <a href = "" class = "outline-btn">View Case Study</a>  
-        </div>
-      </div>
+      
     </section>
     
   </main>
-  <footer>
+  <footer id = "footer">
     <p>Have a project you'd like us to work on?</p>
     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbw0tK_bI9hOklvWrtxvF1PU6Ejo7IHkDv5kT3kT9VsOYb7qtMVm/exec">
-      <input id="name" name="name" placeholder="What should we call you?" />
-      <input id="subject" name="subject" type="text" value="" required placeholder="What's this about?" />
-      <textarea id="body" name="body" rows="10" placeholder="Tell us what's on your mind..."></textarea>
-      <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+      <input autocomplete = "off" id="name" name="name" placeholder="What should we call you?" />
+      <input autocomplete = "off" id="subject" name="subject" type="text" value="" required placeholder="What's this about?" />
+      <textarea autocomplete = "off" id="body" name="body" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+      <input autocomplete = "off" id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
       <button>SUBMIT</button>
     </form>
   </footer>

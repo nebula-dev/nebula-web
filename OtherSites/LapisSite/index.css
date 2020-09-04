@@ -1,0 +1,67 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #253C78;
+    color: white;
+}
+h1, h2, h3, h4, p {
+    font-family: 'acumin-pro', sans-serif;
+    font-style: normal;
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+h4 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+p {
+    font-weight: 300;
+    max-width: 1000px;
+    line-height: 2;
+    margin: 0 20px 20px 20px;
+}
+header {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
+main img {
+    width: 300px;
+    margin-top: 80px;
+}
+.logo {
+    background-color: #253C78;
+    padding: 20px;
+    border-radius: 24px;
+}
+.logo div {
+    min-width: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        position: fixed;
+        top: -100px;
+        opacity: 0;
+    }
+}

@@ -1,5 +1,5 @@
 .projects-container {
-    min-height: 100vh;
+    min-height: 60vh;
 }
 h1 {
     text-align: center;
@@ -30,7 +30,6 @@ main {
 .project-img {
     width: 450px;
     height: 280px;
-    background-color: white;
     margin: 2rem 2rem;
 }
 .project-content {
