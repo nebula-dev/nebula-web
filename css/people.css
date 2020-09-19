@@ -1,0 +1,42 @@
+.people-heading {
+    background-color: var(--bg);
+    color: white;
+    padding: 20rem 0 18rem 0;
+}
+.people-heading h1, .people-heading h2 {
+    margin: 0 var(--outerMargin);
+}
+.person {
+    margin: 4rem;
+    transform: translateY(calc(-162.5px - 4rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portrait {
+    width: 318px;
+    height: 325px;
+    border-radius: 1000px;
+    background-color: lightgrey;
+    position: relative;
+}
+.blob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.person h2 {
+    margin: 1rem 0 0.25rem;
+}
+.people-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.people-wrapper {
+    padding: 0 var(--outerMargin);
+    background-color: var(--bg2);
+}
+#people-contact-section {
+    padding-top: 0;
+}
