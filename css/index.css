@@ -82,6 +82,12 @@ ABOUT SECTION STYLES
 RESPONSIVITY
 
 */
+@media screen and (max-width: 700px) {
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 @media screen and (max-width: 1000px) {
     .card {
         padding-bottom: 4rem;

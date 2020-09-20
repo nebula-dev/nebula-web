@@ -403,6 +403,22 @@ RESPONSIVITY
 
     }
 }
+@media screen and (max-width: 500px) {
+    .contact-form-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contact-form input[type = "text"] {
+        min-width: 250px;
+    }
+    .contact-form input[type = "submit"] {
+        min-width: 200px;
+    }
+
+    .l1 {
+        font-size: 3rem;
+    }
+}
 
 
 
