@@ -25,6 +25,16 @@
     width: 100%;
     height: 100%;
 }
+.headshot-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 1000px;
+    overflow: hidden;
+}
+.headshot {
+    width: 100%;
+    height: auto;
+}
 .person h2 {
     margin: 1rem 0 0.25rem;
 }
