@@ -21,7 +21,7 @@ jobs:
         env:
           TARGET_SRC: 'static/'
           CDN_BASE_URL: 'https://static.nebula.dev/'
-          CDN_PATH: 'nebula-web'
+          CDN_PATH: 'nebula-web/'
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.1
