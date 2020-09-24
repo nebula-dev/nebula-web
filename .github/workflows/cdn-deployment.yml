@@ -17,7 +17,7 @@ jobs:
           SPACE_SECRET_KEY: ${{ secrets.SPACE_SECRET_KEY }}
 
       - name: CDN Linking
-        uses: nebula-dev/cdn-linking-action
+        uses: nebula-dev/cdn-linking-action@master
         env:
           TARGET_SRC: 'static/'
           CDN_BASE_URL: 'https://static.nebula.dev/'
