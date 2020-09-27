@@ -22,15 +22,12 @@ jobs:
           TARGET_SRC: 'static/'
           CDN_BASE_URL: 'https://static.nebula.dev/'
           CDN_PATH: 'nebula-web/'
-      
-      - name: Dist Package
-        run: ./.github/scripts/dist.sh
-        shell: bash
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.1
+        uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: deploy # The branch the action should deploy to.
-          FOLDER: dist/ # The folder the action should deploy.
+          PRESERVE: true
+          FOLDER: . # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
