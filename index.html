@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
     <!--common (consistent on all pages)-->
-    <link rel = "stylesheet" type = "text/css" href = "static/css/common.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
+    <!--preconnect/preload resources-->
+    <link rel="preconnect" href="https://static.nebula.dev/">
+    <link rel="preconnect" href="https://use.typekit.net/">
+    <link rel="preconnect" href="https://p.typekit.net/">
+
+    <link rel="preload" href="static/css/common.css" as="style" type="text/css">
+    <link rel="preload" href="https://use.typekit.net/nbw5qxv.css" as="style" crossorigin>
+
+    <!-- unique preload-->
+    <link rel="preload" href="static/css/index.css" as="style" type="text/css" >
+    
+    <!--common (consistent on all pages)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=jw370a5Gvv">
@@ -17,7 +27,6 @@
 
     <!--unique to this page-->
     <title>Nebula</title>
-    <link rel = "stylesheet" type = "text/css" href = "static/css/index.css">
     
     <meta name="title" content="Nebula Consulting">
     <meta name="description" content="We build brands that inspire. Your branding should reflect you and we will not settle for anything less. To accomplish this, we take on the whole process from your web presence to your design language. Nothing less than the stars...">
@@ -27,6 +36,11 @@
     <meta property="og:image" content="static/img/meta-banner.png"/>
     <meta property="og:description" content="We build brands that inspire. Your branding should reflect you and we will not settle for anything less. To accomplish this, we take on the whole process from your web presence to your design language. Nothing less than the stars..."/>
     <meta property="og:url" content="https://nebula.dev/"/>
+
+    <!-- reference loaded content -->
+    <link rel="stylesheet" type="text/css" href="static/css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
+    <link rel="stylesheet" type ="text/css" href="static/css/index.css">
 </head>
 <body>
     <!--HEADER-->
