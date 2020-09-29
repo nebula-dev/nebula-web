@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
     <!--common (consistent on all pages)-->
-    <link rel="stylesheet" type="text/css" href="https://static.nebula.dev/nebula-web/css/common.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
+    <!--preconnect/preload resources-->
+    <link rel="preconnect" href="https://static.nebula.dev/">
+    <link rel="preconnect" href="https://use.typekit.net/">
+    <link rel="preconnect" href="https://p.typekit.net/">
+
+    <link rel="preload" href="https://static.nebula.dev/nebula-web/css/common.css" as="style" type="text/css">
+    <link rel="preload" href="https://use.typekit.net/nbw5qxv.css" as="style" crossorigin>
+
+    <!-- unique preload-->
+    <link rel="preload" href="https://static.nebula.dev/nebula-web/css/people.css" as="style" type="text/css" >
+
+    <!--common (consistent on all pages)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=jw370a5Gvv">
@@ -16,9 +26,12 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--unique to this page-->
-    <title>Nebula</title>
-    <link rel="stylesheet" type="text/css" href="https://static.nebula.dev/nebula-web/css/people.css">
+    <title>Nebula - People</title>
 
+    <!-- reference loaded content -->
+    <link rel="stylesheet" type="text/css" href="https://static.nebula.dev/nebula-web/css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
+    <link rel = "stylesheet" type = "text/css" href = "https://static.nebula.dev/nebula-web/css/people.css">
 </head>
 <body>
     <!--HEADER-->
@@ -60,9 +73,9 @@
             <div class="people-container">
                 <div class="person">
                     <div class="portrait">
-                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob1.svg">
+                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob1.svg" alt="">
                         <div class="headshot-wrapper">
-                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/galileo-headshot.jpg?width=400&quality=100">
+                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/galileo-headshot.jpg?width=400&quality=100" alt="Headshot of Galileo">
                         </div>
                     </div>
                     <h2 class="l3">Galileo Daras</h2>
@@ -70,9 +83,9 @@
                 </div>
                 <div class="person">
                     <div class="portrait">
-                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob2.svg">
+                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob2.svg" alt="">
                         <div class="headshot-wrapper">
-                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/TomHeadshot.jpg?width=400&quality=100">
+                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/TomHeadshot.jpg?width=400&quality=100" alt="Headshot of Tom">
                         </div>
                     </div>
                     <h2 class="l3">Tom Shahar</h2>
@@ -80,9 +93,9 @@
                 </div>
                 <div class="person">
                     <div class="portrait">
-                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob3.svg">
+                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob3.svg" alt="">
                         <div class="headshot-wrapper">
-                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/leona-headshot.jpg?width=400&quality=100">
+                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/leona-headshot.jpg?width=400&quality=100" alt="Headshot of Leona">
                         </div>
                     </div>
                     <h2 class="l3">Leona Das</h2>
@@ -90,9 +103,9 @@
                 </div>
                 <div class="person">
                     <div class="portrait">
-                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob4.svg">
+                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob4.svg" alt="">
                         <div class="headshot-wrapper">
-                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/nick-headshot.jpg?width=400&quality=100">
+                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/nick-headshot.jpg?width=400&quality=100" alt="Headshot of Nick">
                         </div>
                     </div>
                     <h2 class="l3">Nick Billiouris</h2>
@@ -100,9 +113,9 @@
                 </div>
                 <div class="person">
                     <div class="portrait">
-                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob1.svg">
+                        <img class="blob" src="https://static.nebula.dev/nebula-web/img/Blob1.svg" alt="">
                         <div class="headshot-wrapper">
-                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/headshot.jpeg?width=400&quality=100">
+                            <img class="headshot" src="https://static.nebula.dev/nebula-web/img/headshots/headshot.jpeg?width=400&quality=100" alt="Headshot of Alex">
                         </div>
                     </div>
                     <h2 class="l3">Alex Yan</h2>
@@ -117,21 +130,21 @@
                     LET'S BUILD <br> YOUR BRAND, <br> TOGETHER
                 </h2>
                 <h3 class="p1">Get a start@nebula.dev</h3>
-                <img src="https://static.nebula.dev/nebula-web/img/ContactIllustration.svg">
+                <img src="https://static.nebula.dev/nebula-web/img/ContactIllustration.svg" alt="">
             </div>
             <div class="contact-form-wrapper">
                 <form class="contact-form">
-                    <label class="l4">Name</label>
-                    <input type="text" placeholder="your name"></input>
-                    <label class="l4">Company</label>
-                    <input type="text" placeholder="your company name"></input>
-                    <label class="l4">Phone</label>
-                    <input type="text" placeholder="your phone number"></input>
-                    <label class="l4">Email Address</label>
-                    <input type="text" placeholder="your email"></input>
-                    <label class="l4">How can we help?</label>
-                    <input type="text" placeholder="a brief description"></input>
-                    <input type="submit" class="fill-btn" value="SUBMIT" style="color: white; border: none;">
+                    <label class = "l4" for="contact-name">Name</label>
+                    <input id="contact-name" type = "text" placeholder = "your name"></input>
+                    <label class = "l4" for="contact-company">Company</label>
+                    <input id="contact-company" type = "text" placeholder = "your company name"></input>
+                    <label class = "l4" for="contact-phone">Phone</label>
+                    <input id="contact-phone" type = "text" placeholder = "your phone number"></input>
+                    <label class = "l4" for="contact-email">Email Address</label>
+                    <input id="contact-email" type = "text" placeholder = "your email"></input>
+                    <label class = "l4" for="contact-description">How can we help?</label>
+                    <input id="contact-description" type = "text" placeholder = "a brief description"></input>
+                    <input type = "submit" class = "fill-btn" value = "SUBMIT" style = "color: white; border: none;">
                 </form>
             </div>
         </section>
@@ -171,8 +184,9 @@
                 Subscribe for the latest Nebula news and case studies
             </p>
             <form>
-                <input type="text" placeholder="your email address">
-                <input type="submit" value="SUBSCRIBE" data-content="SUBSCRIBE" class="outline-btn">
+                <label style="display: none;" for="newsletter-email">Email Address for Newsletter</label>
+                <input id="newsletter-email" type = "text" placeholder = "your email address">
+                <input type = "submit" value = "SUBSCRIBE" data-content = "SUBSCRIBE" class = "outline-btn">
             </form>
         </div>
     </footer>
