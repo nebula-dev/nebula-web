@@ -1,4 +1,5 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <!--common (consistent on all pages)-->
     <link rel = "stylesheet" type = "text/css" href = "static/css/common.css">
@@ -164,7 +165,8 @@
                 Subscribe for the latest Nebula news and case studies
             </p>
             <form>
-                <input type = "text" placeholder = "your email address">
+                <label style="display: none;" for="newsletter-email">Email Address for Newsletter</label>
+                <input id="newsletter-email" type = "text" placeholder = "your email address">
                 <input type = "submit" value = "SUBSCRIBE" data-content = "SUBSCRIBE" class = "outline-btn">
             </form>
         </div>
