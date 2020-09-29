@@ -33,7 +33,7 @@
             <a class = "outline-btn" href = "/contact" data-content = "CONTACT">CONTACT</a>
         </nav>
         <!--Hamburger-->
-        <button class = "hamburger" onclick = "menuToggle();">
+        <button class = "hamburger" onclick = "menuToggle();" aria-label="Open navigation menu">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="6" y1="9" x2="22" y2="9" stroke="#F9F4F0" stroke-width="2" stroke-linecap="round"/>
                 <line x1="6" y1="17" x2="22" y2="17" stroke="#F9F4F0" stroke-width="2" stroke-linecap="round"/>
@@ -58,20 +58,20 @@
                     LET'S BUILD <br> YOUR BRAND, <br> TOGETHER
                 </h2>
                 <h3 class = "p1">Get a start@nebula.dev</h3>
-                <img src = "static/img/ContactIllustration.svg">
+                <img src = "static/img/ContactIllustration.svg" alt="">
             </div>
             <div class = "contact-form-wrapper">
                 <form class = "contact-form">
-                    <label class = "l4">Name</label>
-                    <input type = "text" placeholder = "your name"></input>
-                    <label class = "l4">Company</label>
-                    <input type = "text" placeholder = "your company name"></input>
-                    <label class = "l4">Phone</label>
-                    <input type = "text" placeholder = "your phone number"></input>
-                    <label class = "l4">Email Address</label>
-                    <input type = "text" placeholder = "your email"></input>
-                    <label class = "l4">How can we help?</label>
-                    <input type = "text" placeholder = "a brief description"></input>
+                    <label class = "l4" for="contact-name">Name</label>
+                    <input id="contact-name" type = "text" placeholder = "your name"></input>
+                    <label class = "l4" for="contact-company">Company</label>
+                    <input id="contact-company" type = "text" placeholder = "your company name"></input>
+                    <label class = "l4" for="contact-phone">Phone</label>
+                    <input id="contact-phone" type = "text" placeholder = "your phone number"></input>
+                    <label class = "l4" for="contact-email">Email Address</label>
+                    <input id="contact-email" type = "text" placeholder = "your email"></input>
+                    <label class = "l4" for="contact-description">How can we help?</label>
+                    <input id="contact-description" type = "text" placeholder = "a brief description"></input>
                     <input type = "submit" class = "fill-btn" value = "SUBMIT" style = "color: white; border: none;">
                 </form>
             </div>
