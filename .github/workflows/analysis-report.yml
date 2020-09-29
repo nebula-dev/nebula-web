@@ -10,17 +10,19 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
+      - run: mkdir reports
+
       - name: Report Generation
         uses: foo-software/lighthouse-check-action@master
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
           urls: 'https://www.nebula.dev/,https://www.nebula.dev/people,https://www.nebula.dev/contact'
-          outputDirectory: "$HOME/reports"
+          outputDirectory: "reports"
         
       - name: CDN Deployment
         uses: nebula-dev/spaces-sync-action@master
         env:
-          SOURCE_DIR: "$HOME/reports"
+          SOURCE_DIR: "./reports"
           SPACE_REGION: 'sfo2'
           SPACE_NAME: ${{ secrets.SPACE_NAME }}
           SPACE_ACCESS_KEY: ${{ secrets.SPACE_ACCESS_KEY }}
