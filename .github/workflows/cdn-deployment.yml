@@ -31,10 +31,4 @@ jobs:
           FOLDER: . # The folder the action should deploy.
           PRESERVE: true
           CLEAN: true # Automatically remove deleted files from the deploy branch
-      
-      - name: Report Generation
-        uses: foo-software/lighthouse-check-action@master
-        with:
-          accessToken: ${{ secrets.GITHUB_TOKEN }}
-          urls: ''
 
