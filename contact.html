@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <script async defer data-domain="nebula.dev" src="https://plausible.io/js/plausible.js"></script>
+
     <!--common (consistent on all pages)-->
-    <link rel = "stylesheet" type = "text/css" href = "https://nebula.dev/static/css/common.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
+    <!--preconnect/preload resources-->
+    <link rel="preconnect" href="https://static.nebula.dev/">
+    <link rel="preconnect" href="https://use.typekit.net/">
+    <link rel="preconnect" href="https://p.typekit.net/">
+
+    <link rel="preload" href="static/css/common.css" as="style" type="text/css">
+    <link rel="preload" href="https://use.typekit.net/nbw5qxv.css" as="style" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=jw370a5Gvv">
@@ -15,16 +23,18 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--unique to this page-->
-    <title>Nebula</title>
+    <title>Nebula - Contact</title>
 
-
+    <!-- reference loaded content -->
+    <link rel="stylesheet" type="text/css" href="static/css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nbw5qxv.css">
 </head>
 <body>
     <!--HEADER-->
     <header>
         <!--logo (wordmark included)-->
         <a class = "logo-wordmark" href = "/">
-            <img src = "https://nebula.dev/static/img/Nebula_Logo_Final_HWhite.svg" alt = "nebula logo">
+            <img src = "static/img/Nebula_Logo_Final_HWhite.svg" alt = "nebula logo">
         </a>
         <!--header links-->
         <nav>
@@ -33,7 +43,7 @@
             <a class = "outline-btn" href = "/contact" data-content = "CONTACT">CONTACT</a>
         </nav>
         <!--Hamburger-->
-        <button class = "hamburger" onclick = "menuToggle();">
+        <button class = "hamburger" onclick = "menuToggle();" aria-label="Open navigation menu">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="6" y1="9" x2="22" y2="9" stroke="#F9F4F0" stroke-width="2" stroke-linecap="round"/>
                 <line x1="6" y1="17" x2="22" y2="17" stroke="#F9F4F0" stroke-width="2" stroke-linecap="round"/>
@@ -58,20 +68,20 @@
                     LET'S BUILD <br> YOUR BRAND, <br> TOGETHER
                 </h2>
                 <h3 class = "p1">Get a start@nebula.dev</h3>
-                <img src = "https://nebula.dev/static/img/ContactIllustration.svg">
+                <img src = "static/img/ContactIllustration.svg" alt="">
             </div>
             <div class = "contact-form-wrapper">
-                <form class = "contact-form">
-                    <label class = "l4">Name</label>
-                    <input type = "text" placeholder = "your name"></input>
-                    <label class = "l4">Company</label>
-                    <input type = "text" placeholder = "your company name"></input>
-                    <label class = "l4">Phone</label>
-                    <input type = "text" placeholder = "your phone number"></input>
-                    <label class = "l4">Email Address</label>
-                    <input type = "text" placeholder = "your email"></input>
-                    <label class = "l4">How can we help?</label>
-                    <input type = "text" placeholder = "a brief description"></input>
+                <form class = "contact-form" action="https://formspree.io/f/mzbkrrrp" method="POST">
+                    <label class = "l4" for="contact-name">Name</label>
+                    <input id="contact-name" type="text" placeholder="your name" name="name" required></input>
+                    <label class = "l4" for="contact-company">Company</label>
+                    <input id="contact-company" type="text" placeholder="your company name" name="company"></input>
+                    <label class = "l4" for="contact-phone">Phone</label>
+                    <input id="contact-phone" type = "text" placeholder = "your phone number" name="phone"></input>
+                    <label class = "l4" for="contact-email">Email Address</label>
+                    <input id="contact-email" type = "text" placeholder = "your email" name="_replyto" required></input>
+                    <label class = "l4" for="contact-description">How can we help?</label>
+                    <input id="contact-description" type = "text" placeholder = "a brief description" name="description"required></input>
                     <input type = "submit" class = "fill-btn" value = "SUBMIT" style = "color: white; border: none;">
                 </form>
             </div>
@@ -82,10 +92,10 @@
     <footer>
         <div class = "footer-logo-wrapper">
             <a class = "logo-wordmark" href = "index.html">
-                <img src = "https://nebula.dev/static/img/Nebula_Logo_Final_HWhite.svg" alt = "nebula logo">
+                <img src = "static/img/Nebula_Logo_Final_HWhite.svg" alt = "nebula logo">
             </a>
             <p class = "p1">
-                (555) 555 - 5555 <br>
+                (415) 770 - 7746 <br>
                 start@nebula.dev
             </p>
         </div>
@@ -112,7 +122,7 @@
                 Subscribe for the latest Nebula news and case studies
             </p>
             <form>
-                <input type = "text" placeholder = "your email address">
+                <input id="newsletter-email" type = "text" placeholder = "your email address">
                 <input type = "submit" value = "SUBSCRIBE" data-content = "SUBSCRIBE" class = "outline-btn">
             </form>
         </div>
