@@ -6,6 +6,11 @@ main {
 .hero-section {
     padding: 12rem var(--outerMargin);
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-wrapper {
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -108,36 +113,71 @@ RESPONSIVITY
     .hero-section img {
         width: 600px;
     }
+    .hero-section {
+        padding-bottom: 8rem;
+    }
+
 }
 @media screen and (max-width: 1225px) {
     .hero-section img {
         width: 500px;
-    }
-}
-@media screen and (max-width: 1125px) {
-    .hero-section {
-        position: relative;
-    }
-    .hero-section img {
-        width: 700px;
         position: absolute;
-        bottom: 0;
-        left: 200px;
+        right:var(--outerMargin);
+    }
+    .hero-wrapper {
+        width:100%;
+
+    }
+    .hero-content {
+        width:100%;
     }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 820px) {
+    .hero-wrapper {
+        position:relative;
+    }
     .hero-section img {
-        left: 100px;   
+        position:absolute;
+        width: 80%;
+        right: 10%;
+        bottom: -30%;
+    }
+    .hero-content {
+        position: relative;
+        left: 8%;
+        width: auto;
+    }
+    .hero-section {
+        padding-bottom: 16rem;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 550px) {
+    .hero-content {
+        left: 0%;
+    }
+    .card img {
+        transform: scale(0.9);
+    }
     .hero-section img {
-        left: 20px;
+        width: 100%;
+        right: 0;
+    } 
+}
+@media screen and (max-width: 380px) {
+    :root {
+        font-size: 16px;
+    }
+    .hamburger {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+    }
+    .l1 {
+        font-size: 2.5rem;
+    }
+    .hero-content br {
+        display: none;
     }
 }
-@media screen and (max-width: 750px) {
-    .hero-section img {
-        width: 80vw;
-        left: calc(10vw - 1rem);    
-    }
-}
+
