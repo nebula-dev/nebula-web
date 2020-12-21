@@ -45,6 +45,9 @@ ABOUT SECTION STYLES
     flex-direction: column;
     justify-content: center;
 }
+.about-section h2 {
+    text-align: center;
+}
 .card-container {
     display: flex;
     justify-content: center;
@@ -164,9 +167,6 @@ RESPONSIVITY
     } 
 }
 @media screen and (max-width: 380px) {
-    :root {
-        font-size: 16px;
-    }
     .hamburger {
         width: 2rem;
         height: 2rem;
