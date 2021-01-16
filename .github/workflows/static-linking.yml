@@ -1,21 +1,14 @@
-name: Deployment
-on: [push]
+name: Static Linking
+on:
+  push:
+    branches: [ master ]
 jobs:
-  deploy:
+  link:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
       
-      - name: CDN Deployment
-        uses: nebula-dev/spaces-sync-action@master
-        env:
-          SOURCE_DIR: './static/'
-          SPACE_REGION: 'sfo2'
-          SPACE_NAME: ${{ secrets.SPACE_NAME }}
-          SPACE_ACCESS_KEY: ${{ secrets.SPACE_ACCESS_KEY }}
-          SPACE_SECRET_KEY: ${{ secrets.SPACE_SECRET_KEY }}
-
       - name: CDN Linking
         uses: nebula-dev/cdn-linking-action@master
         env:
@@ -31,4 +24,6 @@ jobs:
           FOLDER: . # The folder the action should deploy.
           PRESERVE: true
           CLEAN: true # Automatically remove deleted files from the deploy branch
+      
+      
 
