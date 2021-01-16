@@ -1,7 +1,8 @@
 name: Static Linking
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 jobs:
   link:
     runs-on: ubuntu-latest
