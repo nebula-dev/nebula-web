@@ -1,0 +1,29 @@
+name: Deployment
+on:
+  push:
+    branches: 
+      - deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      
+      - name: GCP Setup
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: '276.0.0'
+          service_account_email: ${{ secrets.GCP_SERVICE_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SERVICE_PK }}
+      - name: GCP Storage Sync
+        run: gsutil -m rsync -d -c -r ./ gs://nebula-web
+      - name: GCP Storage Cache HTML 
+        run: gsutil -m setmeta -h "Cache-Control:public, max-age=3600" gs://nebula-web/**/*.html
+      - name: GCP Storage Cache JS
+        run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://nebula-web/js/*.js
+      - name: GCP Storage Cache CSS
+        run: gsutil -m setmeta -h "Cache-Control:public, max-age=31536000" gs://nebula-web/css/*.css
+
