@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       
       - name: CDN Linking
         uses: nebula-dev/cdn-linking-action@master
@@ -16,6 +16,11 @@ jobs:
           TARGET_SRC: 'static/'
           CDN_BASE_URL: 'https://static.nebula.dev/'
           CDN_PATH: 'nebula-web/'
+
+      - name: Bundle
+        run: |
+          mkdir bundle
+          cp -R ./* bundle
 
       - name: GCP Setup
         uses: google-github-actions/setup-gcloud@master
@@ -28,7 +33,7 @@ jobs:
       - name: GCP Storage Upload
         uses: google-github-actions/upload-cloud-storage@main
         with:
-          path: ./
+          path: ./bundle/
           destination: nebula-web
 
 
