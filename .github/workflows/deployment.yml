@@ -17,16 +17,6 @@ jobs:
           CDN_BASE_URL: 'https://static.nebula.dev/'
           CDN_PATH: 'nebula-web/'
 
-      - name: rsync Bundle
-        uses: up9cloud/action-rsync@v1.3
-        env:
-          MODE: local
-          SOURCE: ./
-          TARGET: ./bundle/
-          ARGS: -av --exclude=".*"
-          PRE_SCRIPT: |
-            mkdir ./bundle/
-
       - name: GCP Setup
         uses: google-github-actions/setup-gcloud@master
         with: 
@@ -37,7 +27,7 @@ jobs:
 
       - name: GCP Storage Rsync
         run: |
-          gsutil rsync -j html,js,css -Rnu -x "\.*" ./bundle gs://nebula-web
+          gsutil rsync -R -n -x '.*/\..*|^\..*' . gs://nebula-web
 
 
       
