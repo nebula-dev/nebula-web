@@ -17,10 +17,15 @@ jobs:
           CDN_BASE_URL: 'https://static.nebula.dev/'
           CDN_PATH: 'nebula-web/'
 
-      - name: Bundle
-        run: |
-          mkdir bundle
-          rysnc -av --exclude=".*" ./ bundle
+      - name: rsync Bundle
+        uses: up9cloud/action-rsync@v1.3
+        env:
+          MODE: local
+          SOURCE: ./
+          TARGET: ./bundle/
+          ARGS: -av --exclude=".*"
+          PRE_SCRIPT: |
+            mkdir ./bundle/
 
       - name: GCP Setup
         uses: google-github-actions/setup-gcloud@master
