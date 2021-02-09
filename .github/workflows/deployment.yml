@@ -17,6 +17,10 @@ jobs:
           CDN_BASE_URL: 'https://static.nebula.dev/'
           CDN_PATH: 'nebula-web/'
 
+      - name: Page Flattening
+        runs: |
+          find ./ -name "*.html" -exec sh -c 'cp $0 `basename "$0" .html`' '{}' \;
+
       - name: GCP Setup
         uses: google-github-actions/setup-gcloud@master
         with: 
