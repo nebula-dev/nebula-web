@@ -27,7 +27,7 @@ jobs:
 
       - name: GCP Storage Rsync
         run: |
-          gsutil rsync -R -n -x '.*/\..*|^\..*' . gs://nebula-web
+          gsutil rsync -R -x '.*/\..*|^\..*' . gs://nebula-web
 
 
       
