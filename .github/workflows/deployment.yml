@@ -39,7 +39,7 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@main
         with:
           path: ./bundle/
-          destination: nebula-web
+          destination: nebula-web//
 
 
       
