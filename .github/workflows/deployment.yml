@@ -37,7 +37,7 @@ jobs:
 
       - name: GCP Storage Rsync
         run: |
-          gsutil -m rsync -j html,js,css -Rnu -x "\.*" ./bundle gs://nebula-web
+          gsutil rsync -j html,js,css -Rnu -x "\.*" ./bundle gs://nebula-web
 
 
       
