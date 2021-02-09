@@ -20,7 +20,7 @@ jobs:
       - name: Bundle
         run: |
           mkdir bundle
-          cp -R ./* bundle
+          rysnc -av --exclude=".*" ./ bundle
 
       - name: GCP Setup
         uses: google-github-actions/setup-gcloud@master
