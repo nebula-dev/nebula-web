@@ -18,7 +18,7 @@ jobs:
           CDN_PATH: 'nebula-web/'
 
       - name: Page Flattening
-        runs: |
+        run: |
           find ./ -name "*.html" -exec sh -c 'cp $0 `basename "$0" .html`' '{}' \;
 
       - name: GCP Setup
