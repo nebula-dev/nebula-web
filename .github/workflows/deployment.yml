@@ -32,6 +32,7 @@ jobs:
       - name: GCP Storage Rsync
         run: |
           gsutil rsync -R -x '.*/\..*|^\..*' . gs://nebula-web
+          find ./ -name "*.html" -exec sh -c 'gsutil setmeta -h "Content-Type:text/html" gs://nebula-web/`basename "$0" .html`' '{}' \;
 
 
       
