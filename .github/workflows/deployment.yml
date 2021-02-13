@@ -1,0 +1,40 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: CDN Linking
+        uses: nebula-dev/cdn-linking-action@master
+        env:
+          TARGET_SRC: 'static/'
+          CDN_BASE_URL: 'https://static.nebula.dev/'
+          CDN_PATH: 'nebula-web/'
+
+      - name: Page Flattening
+        run: |
+          find ./ -name "*.html" -exec sh -c 'cp $0 `basename "$0" .html`' '{}' \;
+
+      - name: GCP Setup
+        uses: google-github-actions/setup-gcloud@master
+        with: 
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_email: ${{ secrets.GCP_SERVICE_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SERVICE_PK }}
+          export_default_credentials: true
+
+      - name: GCP Storage Rsync
+        run: |
+          gsutil rsync -R -x '.*/\..*|^\..*' . gs://nebula-web
+          find ./ -name "*.html" -exec sh -c 'gsutil setmeta -h "Content-Type:text/html" gs://nebula-web/`basename "$0" .html`' '{}' \;
+
+
+      
+      
+
