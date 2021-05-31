@@ -425,6 +425,14 @@ footer {
     .form-section-inner {
         padding: 0rem 1rem;
     }
+    header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .form-section {
         padding: 7rem 0;
     }
@@ -433,6 +441,9 @@ footer {
     }
     .form-illustration {
         flex-basis: 55%;
+    }
+    main {
+        margin-top: 2rem;
     }
 }
 @media screen and (max-width: 360px) {
